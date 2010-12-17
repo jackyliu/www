@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML5 test</title>
+        <link rel="shortcut icon" href="/tmp/icon.png" />
+        <style type="text/css">
+            article{display: block; border: 1px solid red} 
+        </style>
+        <script type="text/javascript">
+            function offlineSupport() {
+                return !!window.applicationCache;
+            }
+            if( localStorage.count ) {
+                localStorage.count++;
+            } else {
+                localStorage.count = 1;
+            }   
+            document.write("count : " + localStorage.count);
+            if(offlineSupport) {
+                document.write("support");
+            } else {
+                document.write("unsupport");
+            }
+            function onloadEvent() {
+                //alert(navigator.appName);
+                //alert(navigator.platform);
+            }
+        </script>
+    </head>
+    <body onload="onloadEvent()">
+        <article>
+        <header>
+        <hgroup>
+        <h1>header line1</h1>
+        <h2>hello</h2>
+        </hgroup>
+        </header>
+
+        <a href="#" rel="bookmark" title="bookmark">hello</a>
+        </article>
+        <nav> 
+        <ul> <li><a href="#">home</a></li> <li><a href="#">blog</a></li> <li><a href="#">gallery</a></li> <li><a href="#">about</a></li> </ul> </nav>
+        <footer> <p>&#167;</p> <p>&#169; 2001&#8211;9 <a href="#">Mark Pilgrim</a></p> </footer>
+        <footer> <nav> <h1>Navigation</h1> <ul> <li><a href="/">Home</a></li>  <li><a href="/standards/">Standards</a></li>  <li><a href="/participate/">Participate</a></li>  <li><a href="/Consortium/membership">Membership</a></li>  <li><a href="/Consortium/">About W3C</a></li>  </ul> </nav> <nav> <h1>Contact W3C</h1> <ul> <li><a href="/Consortium/contact">Contact</a></li>  <li><a href="/Help/">Help and FAQ</a></li>  <li><a href="/Consortium/sup">Donate</a></li>  <li><a href="/Consortium/siteindex">Site Map</a></li>  </ul> </nav> <section> <h1>W3C Updates</h1> <ul> <li><a href="http://twitter.com/W3C">Twitter</a></li> <li><a href="http://identi.ca/w3c">Identi.ca</a></li> </ul> </section> <p class="copyright">Copyright © 2009 W3C</p> </footer>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Game</title>
+        <script type="text/javascript">
+            function onClick() {
+                alert("hello");
+            }
+            function onLoad() {
+                var a = document.getElementById("aaaa");
+                a.onkeydown= onClick;
+                //alert(typeof(a));
+
+            }
+            
+
+        </script>
+    </head>
+    <body onload="onLoad()">
+        hello;
+        <input id="aaaa" type="text" value="aaaaaaaaaa"/>
+    </body>
+</html>
